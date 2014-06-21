@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Coffee" representedClassName="Coffee" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="volume" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="MenuItem" representedClassName="MenuItem" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="coffee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Coffee" syncable="YES"/>
+    </entity>
+    <entity name="Order" representedClassName="Order" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="coffees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MenuItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Coffee" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="MenuItem" positionX="142" positionY="72" width="128" height="88"/>
+        <element name="Order" positionX="295" positionY="188" width="128" height="73"/>
+    </elements>
+</model>
